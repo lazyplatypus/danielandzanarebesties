@@ -4,7 +4,7 @@
   "description": "",
   "main": "zan.js",
   "scripts": {
-    "run_tests": "node test.zan.js"
+    "run_tests": "node tests/test.fizzbuzz.js"
   },
   "author": "",
   "license": "ISC"
