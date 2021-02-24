@@ -1,0 +1,11 @@
+{
+  "name": "danielsstream",
+  "version": "1.0.0",
+  "description": "",
+  "main": "zan.js",
+  "scripts": {
+    "run_tests": "node test.zan.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
