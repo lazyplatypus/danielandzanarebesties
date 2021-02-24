@@ -5,7 +5,7 @@ catch(e) {
     throw new Error("FIZZBUZ AINT FIZZIN' - DANIEL");
 }
 
-let fizzbuzzing = fizzbuzz(9)
+let fizzbuzzing = fizzbuzz(10)
 let test_output = [1, 2, "Fizz", 4, "Buzz", "Fizz", 7, 8, "Fizz", "Buzz"]
 
 if (fizzbuzzing.length == test_output.length
