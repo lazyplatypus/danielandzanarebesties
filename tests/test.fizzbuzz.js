@@ -2,6 +2,11 @@ let fizzbuzz = undefined
 
 try { fizzbuzz = require('../fizzbuzz.js') }
 catch(e) {
+     let payloadFail = [{
+        "eventType":"Commit",
+        "pass":false,
+    }];
+    process.env.PAYLOAD = JSON.stringify(payloadFail);
     throw new Error("FIZZBUZ AINT FIZZIN' - DANIEL");
 }
 
