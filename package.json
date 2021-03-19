@@ -4,7 +4,7 @@
   "description": "",
   "main": "zan.js",
   "scripts": {
-    "run_tests": "node tests/test.fizzbuzz.js"
+    "run_tests": "node tests/test.fizzbuzz.js",
     "new_relic": "node zan.js"
   },
   "author": "",
