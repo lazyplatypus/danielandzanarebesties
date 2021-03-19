@@ -1,4 +1,5 @@
 let fizzbuzz = undefined
+const file = require('fs');
 
 try { fizzbuzz = require('../fizzbuzz.js') }
 catch(e) {
@@ -24,6 +25,8 @@ if (fizzbuzzing.length == test_output.length
     }];
     process.env.PAYLOAD = JSON.stringify(payloadSuccess);
     console.log("Yay! 🎉🎉🎉🎉🎉🎉🎉🍾")
+    
+    file.writeFileSync("payload.json", JSON.stringify(payloadSuccess))
 }
 else {
     let payloadFail = [{
@@ -31,5 +34,8 @@ else {
         "pass":false,
     }];
     process.env.PAYLOAD = JSON.stringify(payloadFail);
+    
+    file.writeFileSync("payload.json", JSON.stringify(payloadFail))
+
     throw new Error(`You're not fizzing well - Zan - Got: ${fizzbuzzing}, was expecting: ${test_output}.`)
 }
