@@ -7,7 +7,7 @@ if (state != 0){
         "eventType":"Commit",
         "pass":false,
     }];
-    file.writeFileSync("event.json", JSON.stringify(payloadFail))
+    process.env.PAYLOAD = JSON.stringify(payloadFail);
 }
 
 else {
@@ -15,5 +15,5 @@ else {
         "eventType":"Commit",
         "pass":true,
     }];
-    file.writeFileSync("event.json", JSON.stringify(payloadSuccess))
+    process.env.PAYLOAD = JSON.stringify(payloadSuccess);
 }
