@@ -17,7 +17,8 @@ jobs:
       - run: npm run run_tests
       - run:
           command: |
-            export PAYLOAD=`cat payload.json`
+            export PAYLOAD=`cat payload.json` >> $BASH_ENV
+            source $BASH_ENV
       - new-relic-events/custom-event:
           events: $PAYLOAD
           nr-account-id: $NewRelicAccount
