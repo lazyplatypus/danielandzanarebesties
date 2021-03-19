@@ -15,10 +15,6 @@ jobs:
       - checkout
       - node/install-packages
       - run: npm run run_tests
-      - run: 
-          name: store test data for nr
-          when: always
-          command: npm run new_relic 
       - new-relic-events/custom-event:
           events: $PAYLOAD
           nr-account-id: $NewRelicAccount
